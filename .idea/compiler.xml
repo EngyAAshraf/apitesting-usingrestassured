@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="runner" />
+        <module name="reqres.in" />
+        <module name="framework" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="apitesting-usingrestassured" target="17" />
+      <module name="framework" target="17" />
+      <module name="reqres.in" target="17" />
+      <module name="runner" target="17" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

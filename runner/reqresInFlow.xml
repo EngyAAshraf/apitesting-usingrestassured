@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="reqresInFlow" allow-return-values="true" verbose="1" >
+    <test name="reqresInFlow">
+        <classes>
+            <class name="registeration.tests.RegisterTest"/>
+            <class name="login.tests.LoginTest"/>
+            <class name="users.tests.CreateUserTest"/>
+            <class name="users.tests.ListUsersTest"/>
+            <class name="users.tests.UpdateUserTest"/>
+            <class name="users.tests.Update2UserTest"/>
+            <class name="users.tests.SingleUserTest"/>
+            <class name="users.tests.DeleteUserTest"/>
+            <class name="users.tests.SingleUserNotFoundTest"/>
+        </classes>
+    </test>
+</suite>
