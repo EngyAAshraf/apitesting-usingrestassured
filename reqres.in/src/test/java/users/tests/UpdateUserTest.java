@@ -13,7 +13,7 @@ public class UpdateUserTest
     public static void updateUserTest() throws IOException
     {
         given().
-                spec(RequestSpec.reqresInRegister()).
+                spec(RequestSpec.reqresInLogin()).
                 body(UpdateUserPayload.updateUserPayload()).
         when().
                 put("/api/users/"+ CommonCreateUserData.UserId+"").

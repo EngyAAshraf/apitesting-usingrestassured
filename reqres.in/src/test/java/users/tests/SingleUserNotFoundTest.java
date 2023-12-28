@@ -1,13 +1,8 @@
 package users.tests;
 
-import io.restassured.response.Response;
 import org.testng.annotations.Test;
 import restfulSpecs.RequestSpec;
-import staticVariables.CommonCreateUserData;
-
 import java.io.IOException;
-
-import static helperFunctions.GetJsonData.getResponseJSONValue;
 import static io.restassured.RestAssured.given;
 
 public class SingleUserNotFoundTest
@@ -16,7 +11,7 @@ public class SingleUserNotFoundTest
     public static void singleUserNotFoundTest() throws IOException
     {
         given().
-                spec(RequestSpec.reqresInRegister()).
+                spec(RequestSpec.reqresInLogin()).
         when().
                 get("/api/users/50").
         then().

@@ -1,6 +1,9 @@
 package users.tests;
 
+import dataProvider.ListOfIDsProvider;
+import dataProvider.RegisterProvider;
 import io.restassured.response.Response;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import restfulSpecs.RequestSpec;
 import staticVariables.CommonCreateUserData;
@@ -10,18 +13,21 @@ import static io.restassured.RestAssured.given;
 
 public class ListUsersTest
 {
-    @Test
-    public static void listUsersTest() throws IOException
+    @Test(dataProvider = "listOfIDsProvider",dataProviderClass = ListOfIDsProvider.class)
+    public static void listUsersTest(int pageNo) throws IOException
     {
         Response res = given().
-                spec(RequestSpec.reqresInRegister()).
-        when().
-                queryParam("page",1).
+                spec(RequestSpec.reqresInLogin()).
+                queryParam("page",pageNo).
+                when().
                 get("/api/users").
         then().
                 statusCode(200).
                 extract().response();
 
-        CommonCreateUserData.UserId = getResponseJSONValue(res, "data[1].id");
+        Assert.assertEquals(Integer.valueOf(getResponseJSONValue(res,"page")),pageNo);
+
+        if(ListOfIDsProvider.count == 0) CommonCreateUserData.UserId = getResponseJSONValue(res, "data[1].id");
+
     }
 }
