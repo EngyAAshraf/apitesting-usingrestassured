@@ -1,7 +1,7 @@
 package restfulSpecs;
 
 import config.FrameworkConfig;
-import dataReader.PropertyReader;
+import io.qameta.allure.restassured.AllureRestAssured;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.filter.log.RequestLoggingFilter;
 import io.restassured.filter.log.ResponseLoggingFilter;
@@ -9,7 +9,6 @@ import io.restassured.http.ContentType;
 import io.restassured.specification.RequestSpecification;
 import logger.TestLogger;
 import org.aeonbits.owner.ConfigFactory;
-import staticVariables.TokensData;
 
 import java.io.IOException;
 
@@ -34,6 +33,7 @@ public class RequestSpec extends TestLogger
                 setContentType(ContentType.JSON).
                 addFilter(new RequestLoggingFilter()).
                 addFilter(new ResponseLoggingFilter()).
+                addFilter(new AllureRestAssured()).
                 build();
     }
 

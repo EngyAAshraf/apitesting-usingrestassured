@@ -71,5 +71,12 @@
     <orderEntry type="library" name="Maven: net.minidev:accessors-smart:2.4.7" level="project" />
     <orderEntry type="library" name="Maven: org.ow2.asm:asm:9.1" level="project" />
     <orderEntry type="library" name="Maven: io.github.cdimascio:java-dotenv:5.2.2" level="project" />
+    <orderEntry type="library" name="Maven: io.qameta.allure:allure-testng:2.25.0" level="project" />
+    <orderEntry type="library" name="Maven: io.qameta.allure:allure-java-commons:2.25.0" level="project" />
+    <orderEntry type="library" name="Maven: io.qameta.allure:allure-model:2.25.0" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: io.qameta.allure:allure-test-filter:2.25.0" level="project" />
+    <orderEntry type="library" name="Maven: io.qameta.allure:allure-rest-assured:2.25.0" level="project" />
+    <orderEntry type="library" name="Maven: io.qameta.allure:allure-attachments:2.25.0" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.freemarker:freemarker:2.3.31" level="project" />
   </component>
 </module>
